@@ -265,6 +265,7 @@ async fn fetch_all_technical_data(client: &Client, symbols: &[String]) -> Vec<(S
         .collect()
 }
 
+//random comment because I do not have time to commit ;)
 async fn fetch_technical_indicators(client: &Client, symbol: &str) -> Result<TechnicalIndicators> {
     let sma50 = fetch_indicator_value(client, symbol, "sma", "daily", 50).await?;
     let sma200 = fetch_indicator_value(client, symbol, "sma", "daily", 200).await?;
