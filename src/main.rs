@@ -265,7 +265,7 @@ async fn fetch_all_technical_data(client: &Client, symbols: &[String]) -> Vec<(S
         .collect()
 }
 
-//random comment because I do not have time to commit ;)
+//random comment because I do not have time to commit
 async fn fetch_technical_indicators(client: &Client, symbol: &str) -> Result<TechnicalIndicators> {
     let sma50 = fetch_indicator_value(client, symbol, "sma", "daily", 50).await?;
     let sma200 = fetch_indicator_value(client, symbol, "sma", "daily", 200).await?;
@@ -291,7 +291,7 @@ async fn fetch_indicator_value(
     time_period: i32,
 ) -> Result<Option<f64>> {
     let url = format!(
-        "https://api.twelvedata.com/technical_indicator?symbol={}&interval={}&indicator={}&time_period={}&apikey={}",
+        "https://api.twelvedata.com/technical_indicator?symbol={}&interval={}&indicator={}&time_period={}&apikey={}", //note to self for later, fix this and find some better API later
         symbol, interval, indicator, time_period, STOCK_API_KEY
     );
     let response = client.get(&url).send().await?;
