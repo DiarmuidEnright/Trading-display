@@ -32,7 +32,7 @@ const STOCK_SYMBOLS: &[&str] = &[
     "FB",
     "TSLA",
 ];
-const NEWS_API_URL: &str = "https://api.marketaux.com/v1/news/all";
+const NEWS_API_URL: &str = "https://api.marketaux.com/v1/news/all"; //note to change to now a new API in the future, being throttled by the APi call cap using 12
 const NEWS_API_KEY: &str = "UIg3lYafKnwqxNHmYPc2h282hN9zmhdLrmkz7PJK";
 const TECH_UPDATE_INTERVAL: usize = 10;
 
